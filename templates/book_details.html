@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Details</title>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <h3>By {{ ', '.join(authors) }}</h3>
+    <p>{{ description }}</p>
+    {% if cover_url %}
+    <img src="{{ cover_url }}" alt="Book Cover">
+    {% else %}
+    <p>No cover available</p>
+    {% endif %}
+</body>
+</html>
